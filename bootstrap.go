@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 )
 
 func init() {
@@ -12,7 +13,7 @@ func init() {
 }
 
 func bootstrapHandler(w http.ResponseWriter, r *http.Request) {
-	path := "." + r.URL.Path;
+	path := strings.TrimPrefix(r.URL.Path,"/")
 	bsFile, err := os.Open(path)
 	if err != nil {
 		log.Println(err.Error())
