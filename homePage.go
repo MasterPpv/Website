@@ -10,15 +10,10 @@ func init() {
 	http.HandleFunc("/", homePageHandler)
 }
 
-func main() {
-	log.Printf("Server started")
-	log.Fatal(http.ListenAndServe(":8080", nil))
-}
-
 func homePageHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("index.html")
 	if err != nil {
-			log.Fatal(err.Error())
+		log.Fatal(err.Error())
 	}
 	err = tmpl.Execute(w, nil)
 	if err != nil {
