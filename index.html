@@ -5,19 +5,66 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="/bootstrap/js/bootstrap.min.js"></script>
 		<style>
-			.contactInfo {
+			.headerBar {
 				margin-bottom: 0;
 				border-radius: 0;
 			}	
+
+			.siteName {
+				font-size: 3em;
+				margin-top: 16px;
+				margin-bottom: 16px;
+				color: #DDDDDD;
+			}
+
+			.siteName:hover {
+				color: #999999
+			}
+
+			.contactInfo {
+				color: #DDDDDD;
+				margin-right: 0px;
+				padding-right: 0px;
+			}
+
+			.floatRight {
+				float: right;
+			}
+
+			.centerVertical  {
+				vertical-align: middle;
+			}
+
+			.mainMenu {
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="navbar navbar-inverse contactInfo">
+		<div class="navbar navbar-inverse headerBar">
 			<div class="container">
-				<div class="navbar-brand">Priten Vora</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="siteName">Priten Vora</div>
+					</div>
+					<div class="col-xs-6 contactInfo centerVertical">
+						<div class="floatRight">
+							<div class="row">
+								<br/>
+							</div>
+							<div class="row">
+								Phone: 888-888-888
+							</div>
+							<div class="row">
+								Email: jon.doe@gmail.com
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="jumbotron">
+		<div class="jumbotron mainMenu">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-3">
@@ -30,7 +77,7 @@
 						<img src="http://placehold.it/120x120" class="img-circle center-block">
 					</div>
 					<div class="col-xs-3">
-						<img src="http://placehold.it/120x120" class="img-circle center-block">
+						<img src="http://placehold.it/120x120" class="img-circle image-responsive center-block">
 					</div>
 				</div>
 			</div>
