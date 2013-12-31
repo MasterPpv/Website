@@ -14,14 +14,14 @@ func init() {
 
 func bootstrapHandler(w http.ResponseWriter, r *http.Request) {
 	path := strings.TrimPrefix(r.URL.Path,"/")
-	//possibleExtensions := strings.SplitAfter(r.URL.Path, ".")
-	//extension := possibleExtensions[len(possibleExtensions) - 1]
-	//switch(extension) {
-	//case "css":
-	//	
-	//case "js":
-	//	
-	//}
+	possibleExtensions := strings.SplitAfter(r.URL.Path, ".")
+	extension := possibleExtensions[len(possibleExtensions) - 1]
+	switch(extension) {
+	case "css":
+		w.Header().Set("Content-Type", "text/css")
+	case "js":
+		w.Header().Set("Content-Type", "text/javascript")
+	}
 	bsFile, err := os.Open(path)
 	if err != nil {
 		log.Println(err.Error())
@@ -47,7 +47,5 @@ func bootstrapHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(500)
 		return
 	}
-	bsMIMEType := http.DetectContentType(bsFileData)
-	w.Header().Set("Content-Type", bsMIMEType)
 	fmt.Fprintf(w,"%s", string(bsFileData))
 }
