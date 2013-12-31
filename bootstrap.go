@@ -48,6 +48,6 @@ func bootstrapHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	bsMIMEType := http.DetectContentType(bsFileData)
-	w.Header.Set("Content-Type", bsMIMEType)
+	w.Header().Set("Content-Type", bsMIMEType)
 	fmt.Fprintf(w,"%s", string(bsFileData))
 }
