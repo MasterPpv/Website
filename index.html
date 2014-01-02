@@ -5,6 +5,23 @@
 		<link rel="stylesheet" href="/files/font-awesome/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="/files/bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				showMenu();
+			})
+
+			function hideMenu() {
+				$('#navmenu').slideUp(400, function(){
+					$('#menuChevron').show();
+				});
+			}
+
+			function showMenu() {
+				$('#navmenu').slideDown();
+				$('#menuChevron').hide();
+			}
+
+		</script>
 		<style>
 			.headerBar {
 				margin-bottom: 0;
@@ -43,6 +60,13 @@
 				line-height: 2.14;
 				color: inherit;
 				background-color: #444444;
+			}
+
+			.menuToggle {
+				background-color: #444444;
+				width: 100%;
+				color: #DDD;
+				text-align: center;
 			}
 
 			.fa-circle {
@@ -98,14 +122,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="mainMenu">
+		<div id="navmenu" class="mainMenu">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-4">
 						<span class="fa-stack fa-3x fa-center center-block">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-male fa-stack-1x fa-inverse"></i>
-							<div class="mainMenuFade">
+							<div class="mainMenuFade" onclick="hideMenu();">
 								<i class="fa fa-circle fa-stack-2x mainMenuHoverIcon"></i>
 								<div class="mainMenuText">ABOUT</div>
 							</div>
@@ -115,7 +139,7 @@
 						<span class="fa-stack fa-3x fa-center center-block">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-keyboard-o fa-stack-1x fa-inverse"></i>
-							<div class="mainMenuFade">
+							<div class="mainMenuFade" onclick="hideMenu();">
 								<i class="fa fa-circle fa-stack-2x mainMenuHoverIcon"></i>
 								<div class="mainMenuText">PROGRAMMING</div>
 							</div>
@@ -125,7 +149,7 @@
 						<span class="fa-stack fa-3x fa-center center-block">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-camera fa-stack-1x fa-inverse"></i>
-							<div class="mainMenuFade">
+							<div class="mainMenuFade" onclick="hideMenu();">
 								<i class="fa fa-circle fa-stack-2x mainMenuHoverIcon"></i>
 								<div class="mainMenuText">PHOTOGRAPHY</div>
 							</div>
@@ -133,6 +157,9 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="menuToggle" onclick="showMenu();">
+			<i id="menuChevron" class="fa fa-chevron-down fa-2x"></i>
 		</div>
 	<body>
 </html>
