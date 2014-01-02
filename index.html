@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link href="/files/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="/files/font-awesome/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="/files/bootstrap/js/bootstrap.min.js"></script>
 		<style>
@@ -38,6 +39,13 @@
 			.mainMenu {
 				padding-top: 20px;
 				padding-bottom: 20px;
+				background-color: #444444;
+			}
+			.fa-circle {
+				color: #777777;
+			}
+			.fa-center {
+				display: block;
 			}
 		</style>
 	</head>
@@ -67,17 +75,23 @@
 		<div class="jumbotron mainMenu">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-3">
-						<img src="http://placehold.it/120x120" class="img-circle center-block">
+					<div class="col-xs-4">
+						<span class="fa-stack fa-3x fa-center center-block">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-male fa-stack-1x fa-inverse"></i>
+						</span>
 					</div>
-					<div class="col-xs-3">
-						<img src="http://placehold.it/120x120" class="img-circle center-block">
+					<div class="col-xs-4">
+						<span class="fa-stack fa-3x fa-center center-block">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-keyboard-o fa-stack-1x fa-inverse"></i>
+						</span>
 					</div>
-					<div class="col-xs-3">
-						<img src="http://placehold.it/120x120" class="img-circle center-block">
-					</div>
-					<div class="col-xs-3">
-						<img src="http://placehold.it/120x120" class="img-circle image-responsive center-block">
+					<div class="col-xs-4">
+						<span class="fa-stack fa-3x fa-center center-block">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-camera fa-stack-1x fa-inverse"></i>
+						</span>
 					</div>
 				</div>
 			</div>
