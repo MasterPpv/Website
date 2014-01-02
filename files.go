@@ -9,10 +9,10 @@ import (
 )
 
 func init() {
-	http.HandleFunc("/bootstrap/",bootstrapHandler)
+	http.HandleFunc("/files/",fileHandler)
 }
 
-func bootstrapHandler(w http.ResponseWriter, r *http.Request) {
+func fileHandler(w http.ResponseWriter, r *http.Request) {
 	path := strings.TrimPrefix(r.URL.Path,"/")
 	possibleExtensions := strings.SplitAfter(r.URL.Path, ".")
 	extension := possibleExtensions[len(possibleExtensions) - 1]
@@ -21,31 +21,33 @@ func bootstrapHandler(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/css")
 	case "js":
 		w.Header().Set("Content-Type", "text/javascript")
+	case "png":
+		w.Header().Set("Content-Type", "image/png")
 	}
-	bsFile, err := os.Open(path)
+	file, err := os.Open(path)
 	if err != nil {
 		log.Println(err.Error())
 		w.WriteHeader(404)
 		return
 	}
-	bsFileInfo, err := bsFile.Stat()
+	fileInfo, err := file.Stat()
 	if err != nil {
 		log.Println(err.Error())
 		w.WriteHeader(500)
 		return
 	}
-	bsFileSize := bsFileInfo.Size()
-	bsFileData := make([]byte, bsFileSize, bsFileSize)
-	numBytesRead, err := bsFile.Read(bsFileData)
+	fileSize := fileInfo.Size()
+	fileData := make([]byte, fileSize, fileSize)
+	numBytesRead, err := file.Read(fileData)
 	if err != nil {
 		log.Println(err.Error())
 		w.WriteHeader(500)
 		return
 	}
-	if int64(numBytesRead) != bsFileSize {
-		log.Printf("Expected %v bytes, read %v bytes\n", bsFileSize, numBytesRead)
+	if int64(numBytesRead) != fileSize {
+		log.Printf("Expected %v bytes, read %v bytes\n", fileSize, numBytesRead)
 		w.WriteHeader(500)
 		return
 	}
-	fmt.Fprintf(w,"%s", string(bsFileData))
+	fmt.Fprintf(w,"%s", string(fileData))
 }

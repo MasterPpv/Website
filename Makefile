@@ -1,2 +1,2 @@
 default:
-	go run main.go homePage.go bootstrap.go
+	go run main.go homePage.go files.go
