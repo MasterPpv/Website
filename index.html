@@ -27,13 +27,13 @@
 			function getURL(url, callback) {
 				$.ajax(url).done(function(data) {
 					callback(data);
-					hideMenu();
 				});
 			}
 
 			function buttonClicked(url) {
 				getURL(url, function(result) {
 					$("#content").html(result);
+					hideMenu();
 				});
 			}
 
@@ -139,7 +139,6 @@
 
 			/* About Me CSS */
 			.contentSection {
-				;
 			}
 
 			.sectionHeader {
