@@ -23,6 +23,19 @@
 					$('#navmenu').slideDown();
 				});
 			}
+
+			function getUrl(url, callback) {
+				$.ajax(url).done(function(data) {
+					callback(data);
+					hideMenu();
+				});
+			}
+
+			function buttonClicked(url) {
+				getUrl(url,function(result) {
+					$("#content").html(result);
+				});
+			}
 		</script>
 		<style>
 			body {
@@ -184,8 +197,11 @@
 		<div class="menuToggle" onclick="showMenu();">
 			<i id="menuChevron" class="fa fa-chevron-down fa-2x"></i>
 		</div>
-		<div class="content">
-			<!--Will be populated with AJAX-->
+		<div id="content">
+			<div class="sourceOnGithub">
+				<i class="fa fa-github"></i>
+				View Source
+			</div>
 		</div>
 	<body>
 </html>
