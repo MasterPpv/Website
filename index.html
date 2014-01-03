@@ -11,13 +11,17 @@
 			})
 
 			function hideMenu() {
-				$('#navmenu').slideUp();
-				$('#menuChevron').show();
+				$('#menuChevron').css("opacity",1);
+				$('#navmenu').slideUp(400,function() {
+					$('#cheveronSpacer').slideUp(100,null);
+				});
 			}
 
 			function showMenu() {
-				$('#navmenu').slideDown();
-				$('#menuChevron').hide();
+				$('#menuChevron').css("opacity",0);
+				$('#cheveronSpacer').slideDown(85,function() {
+					$('#navmenu').slideDown();
+				});
 			}
 		</script>
 		<style>
@@ -55,7 +59,7 @@
 			}
 
 			.mainMenu {
-				padding: 30px;
+				padding: 15px 30px;
 				font-size: 1.5em;
 				font-weight: 200;
 				line-height: 2.14;
@@ -127,6 +131,10 @@
 				</div>
 			</div>
 		</div>
+		<div id="cheveronSpacer" class="menuToggle">
+			<i class="fa fa-chevron-down fa-2x" style="opacity: 0;"></i>
+		</div>
+
 		<div id="navmenu" class="mainMenu">
 			<div class="container">
 				<div class="row">
