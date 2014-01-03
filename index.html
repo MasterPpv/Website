@@ -28,6 +28,7 @@
 			body {
 				background-color: #FAFAFA
 			}
+
 			.headerBar {
 				margin-bottom: 0;
 				border-radius: 0;
@@ -59,7 +60,7 @@
 			}
 
 			.mainMenu {
-				padding: 15px 30px;
+				padding: 0;
 				font-size: 1.5em;
 				font-weight: 200;
 				line-height: 2.14;
@@ -68,6 +69,7 @@
 			}
 
 			.menuToggle {
+				padding: 0;
 				background-color: #444444;
 				width: 100%;
 				color: #DDD;
@@ -105,6 +107,14 @@
 
 			.mainMenuHoverIcon {
 				color: #222222;
+			}
+
+			.sourceOnGithub {
+				color: #999;
+				font-size: 5.0em;
+				text-shadow: 0 -2px 0 #444;
+				opacity: 0.4;
+				text-align: center;
 			}
 		</style>
 	</head>
@@ -173,6 +183,12 @@
 		</div>
 		<div class="menuToggle" onclick="showMenu();">
 			<i id="menuChevron" class="fa fa-chevron-down fa-2x"></i>
+		</div>
+		<div class="content">
+			<div class="sourceOnGithub">
+				<i class="fa fa-github"></i>
+				View Source
+			</div>
 		</div>
 	<body>
 </html>
