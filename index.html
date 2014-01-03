@@ -134,16 +134,54 @@
 			.contentSection {
 				;
 			}
+
 			.sectionHeader {
+				font-size: 2.5em;
 				text-align: center;
 			}
+
 			.sectionImage {
 				width: 100%;
 				height: 100%;
+				padding: 10px;
+				text-align: center;
+				font-size: 10em;
 			}
+
 			.sectionText {
-				background-color: #AAAAAA;
+				padding: 5px;
 			}
+
+			.sectionEmphasis {
+				color: #5335B5;
+				font-weight: 700;
+				font-size: 2.5em;
+			}
+
+			.sectionEmphasis2 {
+				color: #6943E5;
+				font-weight: 500;
+				font-size: 2em;
+			}
+
+			.sectionHeaderHr {
+				color: #444444;
+				margin: -20px;
+				padding: 0px;
+			}
+
+			.section {
+				margin: 20px;
+			}
+
+			.aboutMeText {
+
+			}
+
+			.divider {
+				margin: 40px;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -180,7 +218,7 @@
 						<span class="fa-stack fa-3x fa-center center-block">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-male fa-stack-1x fa-inverse mainMenuIcon"></i>
-							<div class="mainMenuFade" onclick="hideMenu();">
+							<div class="mainMenuFade" onclick="buttonClicked('/files/aboutMe.html');">
 								<i class="fa fa-circle fa-stack-2x mainMenuHoverIcon"></i>
 								<div class="mainMenuText">ABOUT</div>
 							</div>
@@ -213,24 +251,9 @@
 			<i id="menuChevron" class="fa fa-chevron-down fa-2x"></i>
 		</div>
 		<div id="content">
-			<!--div class="sourceOnGithub">
+			<div class="sourceOnGithub">
 				<i class="fa fa-github"></i>
 				View Source
-			</div-->
-			<div class="container">
-				<div class="row">
-					<div class="sectionHeader">
-						ABOUT ME
-					</div>
-				</div>
-				<div class="row contentSection">
-					<div class="col-md-4" style="background-color: green;">
-						<img src="/files/images/aboutMe.JPG" class="sectionImage"></img>
-					</div>
-					<div class="col-md-8 sectionText">
-						Lots of about me stuff yay =P
-					</div>
-				</div>
 			</div>
 		</div>
 	<body>
