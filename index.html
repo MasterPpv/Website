@@ -36,6 +36,13 @@
 					$("#content").html(result);
 				});
 			}
+
+			function titleClicked() {
+				getURL("/files/main.html", function(result) {
+					$("#content").html(result);
+					showMenu();
+				});
+			}
 		</script>
 		<style>
 			body {
@@ -189,7 +196,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6">
-						<div class="siteName" onclick="showMenu();">Priten Vora</div>
+						<div class="siteName" onclick="titleClicked();">Priten Vora</div>
 					</div>
 					<div class="col-xs-6 contactInfo centerVertical">
 						<div class="floatRight">
