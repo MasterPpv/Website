@@ -24,7 +24,7 @@
 				});
 			}
 
-			function getUrl(url, callback) {
+			function getURL(url, callback) {
 				$.ajax(url).done(function(data) {
 					callback(data);
 					hideMenu();
@@ -32,14 +32,14 @@
 			}
 
 			function buttonClicked(url) {
-				getUrl(url,function(result) {
+				getURL(url, function(result) {
 					$("#content").html(result);
 				});
 			}
 		</script>
 		<style>
 			body {
-				background-color: #FAFAFA
+				background-color: #FAFAFA;
 			}
 
 			.headerBar {
@@ -129,6 +129,21 @@
 				opacity: 0.4;
 				text-align: center;
 			}
+
+			/* About Me CSS */
+			.contentSection {
+				;
+			}
+			.sectionHeader {
+				text-align: center;
+			}
+			.sectionImage {
+				width: 100%;
+				height: 100%;
+			}
+			.sectionText {
+				background-color: #AAAAAA;
+			}
 		</style>
 	</head>
 	<body>
@@ -198,9 +213,24 @@
 			<i id="menuChevron" class="fa fa-chevron-down fa-2x"></i>
 		</div>
 		<div id="content">
-			<div class="sourceOnGithub">
+			<!--div class="sourceOnGithub">
 				<i class="fa fa-github"></i>
 				View Source
+			</div-->
+			<div class="container">
+				<div class="row">
+					<div class="sectionHeader">
+						ABOUT ME
+					</div>
+				</div>
+				<div class="row contentSection">
+					<div class="col-md-4" style="background-color: green;">
+						<img src="/files/images/aboutMe.JPG" class="sectionImage"></img>
+					</div>
+					<div class="col-md-8 sectionText">
+						Lots of about me stuff yay =P
+					</div>
+				</div>
 			</div>
 		</div>
 	<body>
