@@ -3,7 +3,7 @@
 	<head>
 		<link href="/files/bootstrap/css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" href="/files/font-awesome/css/font-awesome.min.css">
-		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="/files/jquery-2.0.3.min.js"></script>
 		<script src="/files/bootstrap/js/bootstrap.min.js"></script>
 		<script>
 			$(document).ready(function() {
@@ -189,6 +189,14 @@
 				margin: 40px;
 			}
 
+			/* Programming CSS */
+			.project .codeKeywords {
+				margin: 20px;
+			}
+
+			.project a {
+				color: #515151;
+			}
 		</style>
 	</head>
 	<body>
@@ -235,7 +243,7 @@
 						<span class="fa-stack fa-3x fa-center center-block">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-keyboard-o fa-stack-1x fa-inverse mainMenuIcon"></i>
-							<div class="mainMenuFade" onclick="hideMenu();">
+							<div class="mainMenuFade" onclick="buttonClicked('/files/code.html');">
 								<i class="fa fa-circle fa-stack-2x mainMenuHoverIcon"></i>
 								<div class="mainMenuText">PROGRAMMING</div>
 							</div>
@@ -264,6 +272,7 @@
 					View Source
 				</div>
 			</a>
+			
 		</div>
 	<body>
 </html>
