@@ -210,7 +210,7 @@
 				margin-bottom: 20px;
 			}
 
-			.project a {
+			.project {
 				color: #515151;
 			}
 
@@ -224,6 +224,20 @@
 				padding-bottom: 1px;
 				font-weight: bold;
 			}
+
+			/* Photography CSS */
+			.slideshow {
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			.portfolioSelection {
+				text-align: center;
+				margin-top: 10px;
+				font-weight: bold;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -305,13 +319,22 @@
 			<i id="menuChevron" class="fa fa-chevron-down fa-2x"></i>
 		</div>
 		<div id="content">
-			<a href="https://github.com/MasterPpv/Website" class="nolink">
-				<div class="sourceOnGithub">
-					<i class="fa fa-github"></i>
-					View Source
+			<div class="row">
+				<div class="col-xs-12 portfolioSelection">
+					Portfolios:
+					<button type="button" class="btn btn-lg btn-primary">Standard</button>
+					<button type="button" class="btn btn-lg btn-primary">Music</button>
 				</div>
-			</a>
-			
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6 slideshow">
+					<iframe src="http://www.flickr.com/slideShow/index.gne?set_id=72157635073357693" frameBorder="0" width="640" height="640" scrolling="no"></iframe>
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
 		</div>
 	<body>
 </html>
