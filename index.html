@@ -1,12 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link href="/files/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="/files/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="/files/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/gallerie/gallerie.css" type="text/css">
+		<link rel="stylesheet" href="/gallerie/gallerie-effect.css" type="text/css">
 		<script src="/files/jquery-2.0.3.min.js"></script>
 		<script src="/files/bootstrap/js/bootstrap.min.js"></script>
-		<script>
+		<script src="/gallerie/jquery.gallerie.js"></script>
+		<script type="text/javascript">
 			$(document).ready(function() {
+				$('#gallery').gallerie();
 				showMenu();
 			})
 
@@ -333,6 +337,10 @@
 					<iframe src="http://www.flickr.com/slideShow/index.gne?set_id=72157635073357693" frameBorder="0" width="640" height="640" scrolling="no"></iframe>
 				</div>
 				<div class="col-md-3">
+					<div id="gallery">
+						<a href="http://www.flickr.com/photos/masterppv/12175650476/"><img src="http://farm8.staticflickr.com/7445/12175650476_f69839e6d3_z.jpg"></a>
+						<a href="http://www.flickr.com/photos/masterppv/11596005573/"><img src="http://farm4.staticflickr.com/3707/11596005573_bbcacfd351_z.jpg"></a>
+					</div>
 				</div>
 			</div>
 		</div>
